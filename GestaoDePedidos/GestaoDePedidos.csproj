@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <Folder Include="Comanda\" />
-    <Folder Include="Pedidos\" />
   </ItemGroup>
 
 </Project>
