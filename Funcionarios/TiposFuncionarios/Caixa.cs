@@ -4,17 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Funcionarios
+namespace Funcionarios.TiposFuncionarios
 {
-    public class Garçom : Funcionario
+    internal class Caixa : Funcionario
     {
-        public Garçom(string nome, string contato, int idade, string turno, string endereco, int id, double salario)
+        public Caixa(string nome, string contato, int idade, string turno, string endereco, int id, double salario)
             : base(nome, contato, idade, turno, endereco, id, salario)
         {
 
         }
-        
-          
-        
+
     }
 }
