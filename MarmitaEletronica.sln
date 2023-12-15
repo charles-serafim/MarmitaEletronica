@@ -5,6 +5,12 @@ VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarmitaEletronica", "MarmitaEletronica\MarmitaEletronica.csproj", "{ECBE67A3-71AB-47D8-8DF6-158759E16C1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cardapio", "Cardapio\Cardapio.csproj", "{FA9477CB-B4D1-4C6F-AB6E-3B3FEA33CACA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcionarios", "Funcionarios\Funcionarios.csproj", "{B4171C55-3CDB-460C-8097-76F86449E8C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoDePedidos", "GestaoDePedidos\GestaoDePedidos.csproj", "{1AA922AA-99F7-4F1B-927B-5BA71EB433B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{ECBE67A3-71AB-47D8-8DF6-158759E16C1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECBE67A3-71AB-47D8-8DF6-158759E16C1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECBE67A3-71AB-47D8-8DF6-158759E16C1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA9477CB-B4D1-4C6F-AB6E-3B3FEA33CACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA9477CB-B4D1-4C6F-AB6E-3B3FEA33CACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA9477CB-B4D1-4C6F-AB6E-3B3FEA33CACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA9477CB-B4D1-4C6F-AB6E-3B3FEA33CACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4171C55-3CDB-460C-8097-76F86449E8C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4171C55-3CDB-460C-8097-76F86449E8C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4171C55-3CDB-460C-8097-76F86449E8C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4171C55-3CDB-460C-8097-76F86449E8C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AA922AA-99F7-4F1B-927B-5BA71EB433B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AA922AA-99F7-4F1B-927B-5BA71EB433B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AA922AA-99F7-4F1B-927B-5BA71EB433B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AA922AA-99F7-4F1B-927B-5BA71EB433B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
