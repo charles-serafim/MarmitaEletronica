@@ -10,7 +10,6 @@
   <ItemGroup>
     <Folder Include="Mesas\" />
     <Folder Include="Comanda\" />
-    <Folder Include="Pedidos\" />
   </ItemGroup>
 
 </Project>
