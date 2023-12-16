@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Cardapio.TiposCardapios
 {
@@ -10,7 +6,7 @@ namespace Cardapio.TiposCardapios
     {
         public CardapioSaladas(string? sessao) : base(sessao)
         {
-            sessao = "Saladas";
+            Sessao = "Saladas";
         }
     }
 }
