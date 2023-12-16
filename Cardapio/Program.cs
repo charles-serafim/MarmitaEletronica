@@ -1,4 +1,7 @@
-﻿namespace Cardapio
+﻿using Cardapio.TiposCardapios;
+using Cardapio.TiposCardapios;
+
+namespace Cardapio
 {
     internal class Program
     {
