@@ -60,6 +60,28 @@ namespace GestaoDePedidos.Mesas
             this.comanda.EstadoComanda = StatusComanda.Fechada;
         }
 
+        public void ChamarGarcom()
+        {
+            if (this.status != StatusMesa.Ocupada)
+            {
+                throw new Exception("Mesa não foi aberta");
+            }
+            if (this.comanda?.EstadoComanda != StatusComanda.Aberta)
+            {
+                throw new Exception("A comanda não está aberta");
+            }
+            this.comanda.EstadoComanda = StatusComanda.ChamandoGarcom;
+            FazPedido();
+        }
+
+        public void FazPedido()
+        {
+            if (this.comanda?.ItensDaComanda.AdicionarItem() == 0)
+            {
+                this.comanda.EstadoComanda = StatusComanda.Aberta;
+            }
+        }
+
 
         public void Reservar()
         {

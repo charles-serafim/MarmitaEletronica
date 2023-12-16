@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Cardapio.TiposCardapios;
+using Cardapio.TiposItems;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,43 +8,40 @@ using System.Threading.Tasks;
 
 namespace GestaoDePedidos.Pedidos
 {
-    internal class Pedido
+    public class Pedido
     {
-        private static int codigoPedido = 1;
-        public int CodigoPedido { get; set; }
-        public int CodigoComanda { get; set; }
-        public List<ItemPedido> ItensDoPedido { get; set; }
+        public Cardapio Cardapio { get; set; }
+        public List<Item> Itens { get; set; }
         public double ValorTotal { get; set; }
+        public int QqtItens { get; set; }
 
-        public Pedido(int codigoComanda)
+        public Pedido()
         {
-            CodigoPedido = codigoPedido++;
-            CodigoComanda = codigoComanda;
-            ItensDoPedido = new List<ItemPedido>();
+            Itens = new List<Item>();
             ValorTotal = 0;
+            QqtItens = 0;
         }
 
-    }
-
-    internal class ItemPedido
-    {
-        public string NomeItem { get; set; }
-        public int Quantidade { get; set; }
-        public double PrecoUnitario { get; set; }
-
-        public void AdicionarItem()
+        public int AdicionarItem(Cardapio tipoCardapio)
         {
-            string input;
-            while (true)
+            QqtItens = Itens.Count;
+            Itens.Add(tipoCardapio.item);
+            if(Itens.Count <= QqtItens)
             {
-                Console.WriteLine("Código do item: ");
-                input = Console.ReadLine();
-
-                Console.WriteLine("Quantidade: ");
-                Console.WriteLine("Valor: ");
+                throw new Exception("Item não adicionado");
             }
+            ValorTotal += tipoCardapio.item.Valor;
+            return 1;
         }
+
+        public void RemoverItem(int idItem)
+        {
+            Itens.Remove(Itens.Find(x => x.Id == idItem));
+        }
+
     }
+
+        
 
 
 }
