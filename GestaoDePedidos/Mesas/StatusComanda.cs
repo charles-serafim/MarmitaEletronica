@@ -7,6 +7,5 @@
         ChamandoGarcom = 3,
         ChamandoSupervisor = 4,
         Paga = 5
-
     }
 }
