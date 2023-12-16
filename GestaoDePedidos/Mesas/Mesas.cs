@@ -14,16 +14,6 @@ namespace GestaoDePedidos.Mesas
         public StatusMesa status { get; set; }
         public Comanda? comanda { get; set; }
 
-        public void Ocupar()
-        {
-            if (this.status == StatusMesa.Ocupada)
-            {
-                throw new Exception("Mesa já ocupada");
-            }
-
-            this.status = StatusMesa.Ocupada;
-        }
-
         public void AbrirMesa()
         {
             if (this.status != StatusMesa.Livre)
@@ -32,35 +22,19 @@ namespace GestaoDePedidos.Mesas
             }
 
             this.status = StatusMesa.Ocupada;
+            AbrirComanda();
         }
 
         public void AbrirComanda()
         {
-            if (this.status != StatusMesa.Ocupada)
-            {
-                throw new Exception("Mesa não foi aberta");
-            }
             if (this.comanda != null)
             {
                 throw new Exception("Comanda já aberta");
             }
 
             var comanda = new Comanda();
-            this.comanda = comanda;            
-        }
-
-        public void FecharComanda()
-        {
-            if (this.status != StatusMesa.Ocupada)
-            {
-                throw new Exception("Mesa não foi aberta");
-            }
-            if (this.comanda == null)
-            {
-                throw new Exception("Comanda não aberta");
-            }
-
-            this.comanda = null;
+            comanda.EstadoComanda = StatusComanda.Aberta;
+            this.comanda = comanda;
         }
 
         public void FecharMesa()
@@ -74,7 +48,18 @@ namespace GestaoDePedidos.Mesas
                 throw new Exception("A comanda não está fechada");
             }
             this.status = StatusMesa.Livre;
+            FecharComanda();
         }
+        public void FecharComanda()
+        {
+            if (this.comanda == null)
+            {
+                throw new Exception("Comanda não aberta");
+            }
+
+            this.comanda.EstadoComanda = StatusComanda.Fechada;
+        }
+
 
         public void Reservar()
         {
@@ -115,9 +100,6 @@ namespace GestaoDePedidos.Mesas
 
             this.status = StatusMesa.Livre;
         }
-
-
-
 
     }
 }
