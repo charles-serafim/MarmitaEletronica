@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Funcionarios
+namespace Funcionarios.TiposFuncionarios
 {
-    internal abstract class Funcionario
+    public abstract class Funcionario
     {
-        protected string nome;
-        protected string contato;
-        protected int idade;
-        protected string turno;
-        protected string endereco;
-        protected int id;
-        protected double salario;
+        protected string nome { get; set; }
+        protected string contato { get; set; }
+        protected int idade { get; set; }
+        protected string turno { get; set; }
+        protected string endereco { get; set; }
+        protected int id { get; set; }
+        protected double salario { get; set; }
 
         public Funcionario(string nome, string contato, int idade, string turno, string endereco, int id, double salario)
         {
@@ -24,7 +24,7 @@ namespace Funcionarios
             this.turno = turno;
             this.endereco = endereco;
             this.id = id;
-            this.salario = salario;          
+            this.salario = salario;
         }
 
         public void Bonificar(bool meta)
@@ -38,8 +38,8 @@ namespace Funcionarios
             {
                 Console.WriteLine("Este funcionário não tem direito a bonificação no momento.");
             }
-            
+
         }
-        
+
     }
 }
