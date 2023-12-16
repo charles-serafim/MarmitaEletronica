@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Cardapio.TiposItems
 {
     public class ItemSaladas : Item
     {
-        private bool TemVegetal;
-        private bool TemFolhas;
-        public ItemSaladas(string nome, decimal preco, string? descricao, double calorias) : base(nome, preco, descricao, calorias)
+        public bool TemVegetal { get; set; }
+        public bool TemFolhas { get; set; }
+
+        public ItemSaladas(string nome, decimal preco, string? descricao, double calorias, bool temVegetal, bool temFolhas) : base(nome, preco, descricao, calorias)
         {
+            TemVegetal = temVegetal;
+            TemFolhas = temFolhas;
         }
     }
 }
