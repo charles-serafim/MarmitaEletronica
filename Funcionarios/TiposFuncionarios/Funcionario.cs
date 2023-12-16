@@ -8,13 +8,13 @@ namespace Funcionarios.TiposFuncionarios
 {
     public abstract class Funcionario
     {
-        protected string nome;
-        protected string contato;
-        protected int idade;
-        protected string turno;
-        protected string endereco;
-        protected int id;
-        protected double salario;
+        protected string nome { get; set; }
+        protected string contato { get; set; }
+        protected int idade { get; set; }
+        protected string turno { get; set; }
+        protected string endereco { get; set; }
+        protected int id { get; set; }
+        protected double salario { get; set; }
 
         public Funcionario(string nome, string contato, int idade, string turno, string endereco, int id, double salario)
         {

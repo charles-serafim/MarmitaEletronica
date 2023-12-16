@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GestaoDePedidos.Mesas;
 
 namespace Funcionarios.TiposFuncionarios
 {
@@ -14,7 +15,24 @@ namespace Funcionarios.TiposFuncionarios
 
         }
 
+        public void AbrirMesaG(Mesas m)
+        {         
+            m.AbrirMesa();
+        }
 
+        public void FecharMesaG(Mesas m)
+        {
+            m.FecharMesa();
+        }
 
+        public void FazPedidoG(Mesas m)
+        {
+            m.FazPedido();
+        }
+
+        //public void exibirCardapioG(Cardapio c)
+        //{
+        //    c.exibirCardapio();
+        //}
     }
 }
