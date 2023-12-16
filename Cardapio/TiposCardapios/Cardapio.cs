@@ -20,3 +20,4 @@ namespace Cardapio.TiposCardapios
         public void RemoverItem(Item removerItem) => ItemsDoCardapio.Remove(removerItem);
     }
 }
+
