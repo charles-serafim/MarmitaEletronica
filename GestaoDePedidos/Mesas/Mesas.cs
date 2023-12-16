@@ -9,7 +9,6 @@ namespace GestaoDePedidos.Mesas
     internal class Mesas
     {
         public int Id { get; set; }
-        public int Numero { get; set; }
         public int Lugares { get; set; }
         public StatusMesa status { get; set; }
         public Comanda? comanda { get; set; }
