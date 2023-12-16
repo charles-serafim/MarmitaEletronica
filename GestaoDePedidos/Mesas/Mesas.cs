@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestaoDePedidos.Mesas
 {
-    internal class Mesas
+    public class Mesas
     {
         public int Id { get; set; }
         public int Lugares { get; set; }
