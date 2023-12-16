@@ -23,6 +23,7 @@ namespace GestaoDePedidos.Mesas
 
             this.status = StatusMesa.Ocupada;
         }
+
         public void AbrirMesa()
         {
             if (this.status != StatusMesa.Livre)
