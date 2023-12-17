@@ -7,10 +7,9 @@ using Cardapio.TiposItems.Cardapio.TiposItems;
 
 namespace Cardapio.TiposCardapios
 {
-    public class Cardapio
+    public class CardapioLogica:JsonParser
     {
-        public string? Sessao { get; set; }
-        public List<Item> ItemsDoCardapio = new List<Item>();
+        public List<Item> ItemsDoCardapio = JsonParser.ReceberJson();
 
         public List<Item> OrdenarItensPorNome()
         {
@@ -32,17 +31,12 @@ namespace Cardapio.TiposCardapios
             return ItemsDoCardapio.OrderBy(item => item.Vegetariano).ThenBy(item => item.Nome).ToList();
         }
 
-        public Cardapio(string? sessao)
-        {
-            Sessao = sessao;
-        }
-
         public void AdicionarItem(Item novoItem) => ItemsDoCardapio.Add(novoItem);
         public void RemoverItem(Item removerItem) => ItemsDoCardapio.Remove(removerItem);
 
         public void MostrarCardapioOrdenadoPorNome()
         {
-            Console.WriteLine($"--- Cardápio de {Sessao} Ordenado por Nome ---");
+            Console.WriteLine($"--- Cardápio de Refeições Ordenado por Nome ---");
 
             var itensOrdenados = OrdenarItensPorNome();
             foreach (var item in itensOrdenados)
