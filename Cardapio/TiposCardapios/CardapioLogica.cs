@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Collections.Generic;
 using Cardapio.TiposItems;
-using Cardapio.TiposItems.Cardapio.TiposItems;
-
 
 namespace Cardapio.TiposCardapios
 {
@@ -41,7 +39,7 @@ namespace Cardapio.TiposCardapios
             var itensOrdenados = OrdenarItensPorNome();
             foreach (var item in itensOrdenados)
             {
-                Console.WriteLine($"{item.Nome} - {item.Preco:C2} - {item.Descricao} - Calorias: {item.Calorias}");
+                Console.WriteLine($"{item.Id} - {item.Nome} - {item.Preco:C2} - {item.Descricao} - Calorias: {item.Calorias}");
             }
         } 
     }

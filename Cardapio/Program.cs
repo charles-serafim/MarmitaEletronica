@@ -2,7 +2,6 @@
 using Cardapio.TiposItems;
 using Cardapio;
 using System;
-using Cardapio.TiposItems.Cardapio.TiposItems;
 
 namespace Cardapio
 {
@@ -13,7 +12,7 @@ namespace Cardapio
             CardapioLogica cardapioLogica = new CardapioLogica();
             List<Item> ItensDoCardapio = cardapioLogica.ItemsDoCardapio;
 
-            cardapioLogica.Printing(ItensDoCardapio);
+            cardapioLogica.MostrarCardapioOrdenadoPorNome();
         }
     }
 }
