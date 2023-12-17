@@ -19,8 +19,11 @@ public abstract class JsonParser
         {
             string jsonString = File.ReadAllText(absolutePath);
             List<Item> itemList = JsonSerializer.Deserialize<List<Item>>(jsonString);
-            itemList = itemList.OrderBy(item => item.Nome).ToList();
-            
+            for (int i = 0; i < itemList.Count; i++)
+            {
+                itemList[i].ID = i + 1; // IDs iniciando de 1 (ou do valor desejado)
+            }
+
             return itemList;
         }
         catch (Exception ex)
@@ -41,6 +44,7 @@ public abstract class JsonParser
         foreach (var item in itemList)
         {
             Console.WriteLine($"" +
+                $"\nNúmero: {item.ID}," +
                 $"\nNome: {item.Nome}," +
                 $"\nTipo: {item.Tipo}," +
                 $"\nVegetariano: {item.Vegetariano}," +

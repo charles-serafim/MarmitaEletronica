@@ -5,7 +5,7 @@
     "Tipo": 0,
     "Vegetariano": false,
     "Preco": 18.00,
-    "Descricao": "Marmita de frango muito boa e épica",
+    "Descricao": "Marmita de frango muito boa e �pica",
     "Calorias": 500
   },
   {
@@ -14,7 +14,7 @@
     "Tipo": 0,
     "Vegetariano": false,
     "Preco": 19.00,
-    "Descricao": "Marmita de porco muito boa e épica",
+    "Descricao": "Marmita de porco muito boa e �pica",
     "Calorias": 700
   },
   {
@@ -33,7 +33,7 @@
     "Vegetariano": false,
     "Preco": 11.00,
     "Descricao": "Salada com frango e molho Caesar",
-    "Calorias": 400
+    "Calorias": 450
   },
   {
     "Id": 5,
@@ -41,7 +41,7 @@
     "Tipo": 2,
     "Vegetariano": true,
     "Preco": 10.50,
-    "Descricao": "Clássica salada de maionese",
+    "Descricao": "Cl�ssica salada de maionese",
     "Calorias": 600
   },
   {

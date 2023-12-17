@@ -9,6 +9,11 @@ namespace Cardapio.TiposCardapios
     {
         public List<Item> ItemsDoCardapio = JsonParser.ReceberJson();
 
+        public List<Item> OrdenarItensPorNomeEID()
+        {
+            return ItemsDoCardapio.OrderBy(item => item.Nome).ThenBy(item => item.ID).ToList();
+        }
+
         public List<Item> OrdenarItensPorNome()
         {
             return ItemsDoCardapio.OrderBy(item => item.Nome).ToList();
@@ -41,6 +46,6 @@ namespace Cardapio.TiposCardapios
             {
                 Console.WriteLine($"{item.Id} - {item.Nome} - {item.Preco:C2} - {item.Descricao} - Calorias: {item.Calorias}");
             }
-        } 
+        }
     }
 }
