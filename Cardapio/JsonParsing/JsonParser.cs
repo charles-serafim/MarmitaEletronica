@@ -9,7 +9,7 @@ internal class JsonParser
     public static List<Item> Parse()
     {
         // Recebe os paths
-        string absolutePath = @"C:\Users\luanar\source\repos\MarmitaEletronica\Cardapio\Itens.json";
+        string absolutePath = @"C:\Users\pedrov\source\repos\MarmitaEletronica\Cardapio\Itens.json";
         string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
         string relativePath = Path.GetRelativePath(baseDirectory, absolutePath);
 
@@ -17,6 +17,8 @@ internal class JsonParser
         {
             string jsonString = File.ReadAllText(absolutePath);
             List<Item> itemList = JsonSerializer.Deserialize<List<Item>>(jsonString);
+            itemList = itemList.OrderBy(item => item.Nome).ToList();
+            
             return itemList;
         }
         catch (Exception ex)
