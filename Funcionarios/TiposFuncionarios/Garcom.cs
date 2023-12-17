@@ -9,10 +9,11 @@ namespace Funcionarios.TiposFuncionarios
 {
     public class Garcom : Funcionario
     {
-        public Garcom(string nome, string contato, int idade, string turno, string endereco, int id, double salario)
+        public int MesasAtendendo { get; set; }
+        public Garcom(string nome, string contato, int idade, string turno, string endereco, int id, double salario, int mesasAtendendo)
             : base(nome, contato, idade, turno, endereco, id, salario)
         {
-
+            MesasAtendendo = mesasAtendendo;
         }
 
         public void AbrirMesaG(Mesas m)
@@ -28,6 +29,11 @@ namespace Funcionarios.TiposFuncionarios
         public void FazPedidoG(Mesas m)
         {
             m.FazPedido();
+        }
+
+        public string getNomeG()
+        {
+            return nome;
         }
 
         //public void exibirCardapioG(Cardapio c)

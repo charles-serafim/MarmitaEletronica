@@ -9,7 +9,6 @@ namespace GestaoDePedidos.Mesas
     public class Mesas
     {
         public int Id { get; set; }
-        public int Numero { get; set; }
         public int Lugares { get; set; }
         public StatusMesa status { get; set; }
         public Comanda? comanda { get; set; }
@@ -74,7 +73,7 @@ namespace GestaoDePedidos.Mesas
             FazPedido();
         }
 
-        public void FazPedido()
+        public void FazPedido(int idItem)
         {
             if (this.comanda?.ItensDaComanda.AdicionarItem() == 0)
             {
