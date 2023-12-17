@@ -17,7 +17,7 @@ namespace GestaoDePedidos.Pedidos
 
         public Pedido()
         {
-            Itens = new List<Item>();
+            this.Itens = GeraItens();
             ValorTotal = 0;
             QqtItens = 0;
         }
@@ -49,8 +49,4 @@ namespace GestaoDePedidos.Pedidos
         }
 
     }
-
-        
-
-
 }

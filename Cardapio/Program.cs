@@ -1,13 +1,15 @@
-﻿namespace Cardapio
+﻿using Cardapio.TiposCardapios;
+using Cardapio.TiposItems;
+using System;
+
+namespace Cardapio
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            var agua = new CardapioItem("Agua", 1.20m, "Agua mineral, faz bem");
-
-            var Cardapio = new Cardapio("Bebidas");
-
+            var ParserJson = JsonParser.Parse();
+            JsonParser.Printing(ParserJson);
         }
     }
 }
