@@ -9,7 +9,7 @@ internal class JsonParser
     public static List<Item> Parse()
     {
         // Recebe os paths
-        string absolutePath = @"C:\Users\pedrov\Desktop\Ada\arquviosjson\cardapiojson\cardapiojson\itens.json";
+        string absolutePath = @"C:\Users\pedrov\source\repos\MarmitaEletronica\Cardapio\Itens.json";
         string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
         string relativePath = Path.GetRelativePath(baseDirectory, absolutePath);
 
