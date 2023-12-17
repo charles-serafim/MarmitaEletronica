@@ -24,7 +24,7 @@ namespace UI.Menu
             Garcom.AbrirMesaG(Mesa);
         }
 
-        public Mesas MostraCardapio()
+        public void MostraCardapio()
         {
             if (Mesa.Lugares > 1)
                 Console.WriteLine($"Sejam bem vindos à Marmita Eletrônica, meu nome é {Garcom.getNomeG} e será um prazer atendê-los\n\n" +
@@ -35,11 +35,7 @@ namespace UI.Menu
 
             Garcom.ExibirCardapio();
 
-            return this.Mesa;
-
         }
-
-
         public Garcom SelecionaGarcom()
         {
             Garcons?.OrderBy(Garcom => Garcom.MesasAtendendo);

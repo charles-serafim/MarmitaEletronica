@@ -73,7 +73,7 @@ namespace GestaoDePedidos.Mesas
             FazPedido();
         }
 
-        public void FazPedido()
+        public void FazPedido(int idItem)
         {
             if (this.comanda?.ItensDaComanda.AdicionarItem() == 0)
             {
