@@ -12,36 +12,35 @@ namespace GestaoDePedidos.Pedidos
     {
         public Cardapio Cardapio { get; set; }
         public List<Item> Itens { get; set; }
-        public double ValorTotal { get; set; }
+        public decimal ValorTotal { get; set; }
         public int QqtItens { get; set; }
 
         public Pedido()
         {
-            Itens = new List<Item>();
+            this.Itens = GeraItens();
             ValorTotal = 0;
             QqtItens = 0;
         }
 
-        public int AdicionarItem(Cardapio tipoCardapio)
+        public List<Item> GeraItens()
         {
-            QqtItens = Itens.Count;
-            Itens.Add(tipoCardapio.item);
-            if(Itens.Count <= QqtItens)
+            return LeitorJSON();
+        }
+        
+        public void AdicionarItem(Item item)
+        {
+            if (item == null)
             {
                 throw new Exception("Item não adicionado");
             }
-            ValorTotal += tipoCardapio.item.Valor;
-            return 1;
+            Itens.Add(item);
+            QqtItens += 1;
+            ValorTotal += item.Preco;
         }
-
         public void RemoverItem(int idItem)
         {
             Itens.Remove(Itens.Find(x => x.Id == idItem));
         }
 
     }
-
-        
-
-
 }
