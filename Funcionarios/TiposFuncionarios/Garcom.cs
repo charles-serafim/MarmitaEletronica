@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GestaoDePedidos.Mesas;
+using Cardapio.TiposCardapios;
 
 namespace Funcionarios.TiposFuncionarios
 {
@@ -12,6 +13,8 @@ namespace Funcionarios.TiposFuncionarios
         public int MesasAtendendo { get; set; }
 
         public List <Mesas> listaDeMesasAtendidas { get; set; } = new List<Mesas>();
+
+        public Cardapio.TiposCardapios.Cardapio cardapio { get; set; } = new Cardapio.TiposCardapios.Cardapio("");
         public Garcom(string nome, string contato, int idade, string turno, string endereco, int id, double salario, int mesasAtendendo)
             : base(nome, contato, idade, turno, endereco, id, salario)
         {
@@ -42,9 +45,9 @@ namespace Funcionarios.TiposFuncionarios
             return nome;
         }
 
-        //public void exibirCardapioG(Cardapio c)
-        //{
-        //    c.exibirCardapio();
-        //}
+        public void ExibirCardapio()
+        {
+            cardapio.MostrarCardapioOrdenadoPorNome();
+        }       
     }
 }
