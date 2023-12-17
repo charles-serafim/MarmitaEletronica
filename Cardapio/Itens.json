@@ -1,0 +1,50 @@
+[
+  {
+    "Nome": "Marmita de Frango",
+    "Tipo": 0,
+    "Vegetariano": false,
+    "Preco": 18.00,
+    "Descricao": "Marmita de frango muito boa e épica",
+    "Calorias": 700
+  },
+  {
+    "Nome": "Marmita de Porco",
+    "Tipo": 0,
+    "Vegetariano": false,
+    "Preco": 19.00,
+    "Descricao": "Marmita de porco muito boa e épica",
+    "Calorias": 700
+  },
+  {
+    "Nome": "Marmita de Casal",
+    "Tipo": 0,
+    "Vegetariano": false,
+    "Preco": 21.00,
+    "Descricao": "Marmita para casais, serve duas pessoas",
+    "Calorias": 700
+  },
+  {
+    "Nome": "Salada Caesar",
+    "Tipo": 2,
+    "Vegetariano": false,
+    "Preco": 11.00,
+    "Descricao": "Salada com frango e molho Caesar",
+    "Calorias": 700
+  },
+  {
+    "Nome": "Salada de Maionese",
+    "Tipo": 2,
+    "Vegetariano": true,
+    "Preco": 10.50,
+    "Descricao": "Clássica salada de maionese",
+    "Calorias": 700
+  },
+  {
+    "Nome": "Salada Grega",
+    "Tipo": 2,
+    "Vegetariano": false,
+    "Preco": 11.00,
+    "Descricao": "Salada com várias coisas como olivas, chu-chu e tomates",
+    "Calorias": 700
+  }
+]
