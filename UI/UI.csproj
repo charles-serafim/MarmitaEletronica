@@ -7,8 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Cardapio\Cardapio.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Cardapio\Cardapio.csproj" />
+		<ProjectReference Include="..\GestaoDePedidos\GestaoDePedidos.csproj" />
+		<ProjectReference Include="..\Funcionarios\Funcionarios.csproj" />
+	</ItemGroup>
 
 </Project>
