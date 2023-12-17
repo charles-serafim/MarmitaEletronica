@@ -9,15 +9,18 @@ namespace Cardapio.TiposItems
         {
             public string Nome { get; set; }
             public TipoPrato Tipo { get; set; }
-            public bool Vegetariano{ get; set; }
+            public bool Vegetariano { get; set; }
             public decimal Preco { get; set; }
             public string Descricao { get; set; }
             public double Calorias { get; set; }
+            public int ID { get; set; }
 
             public Item() { }  // Add a parameterless constructor
+            private static int NextID = 1;
 
-            public Item(string nome, TipoPrato tipo, bool vegetariano, decimal preco, string descricao, double calorias)
+            public Item(int id, string nome, TipoPrato tipo, bool vegetariano, decimal preco, string descricao, double calorias)
             {
+                ID = NextID++;
                 Nome = nome;
                 Vegetariano = vegetariano;
                 Tipo = tipo;

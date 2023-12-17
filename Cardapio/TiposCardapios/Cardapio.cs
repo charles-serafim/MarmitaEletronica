@@ -12,6 +12,11 @@ namespace Cardapio.TiposCardapios
         public string? Sessao { get; set; }
         public List<Item> ItemsDoCardapio = new List<Item>();
 
+        public List<Item> OrdenarItensPorNomeEID()
+        {
+            return ItemsDoCardapio.OrderBy(item => item.Nome).ThenBy(item => item.ID).ToList();
+        }
+
         public List<Item> OrdenarItensPorNome()
         {
             return ItemsDoCardapio.OrderBy(item => item.Nome).ToList();
@@ -49,6 +54,6 @@ namespace Cardapio.TiposCardapios
             {
                 Console.WriteLine($"{item.Nome} - {item.Preco:C2} - {item.Descricao} - Calorias: {item.Calorias}");
             }
-        } 
+        }
     }
 }
