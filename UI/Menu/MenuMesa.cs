@@ -71,6 +71,7 @@ namespace UI.Menu
                         break;
                 }
             } while (escolha != 4);
+
             Console.WriteLine($"O total da sua comanda é {Mesa.comanda.ItensDaComanda.ValorTotal}" +
                  $" e os itens pedidos foram {Mesa.comanda.ItensDaComanda.ToString}");
             Console.WriteLine("Os itens do pedido estão corretos? (sim/nao)");
@@ -92,8 +93,6 @@ namespace UI.Menu
             else
             {
                 Console.WriteLine("Agradeçemos a preferência, volte sempre!");
-                break;
-
             }
         }
     }   
