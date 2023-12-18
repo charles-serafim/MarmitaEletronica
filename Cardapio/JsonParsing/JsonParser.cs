@@ -1,15 +1,17 @@
-﻿using Cardapio.TiposItems.Cardapio.TiposItems;
+﻿using Cardapio.TiposItems;
+using Cardapio.TiposItems;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 
-internal class JsonParser
+
+public abstract class JsonParser
 {
-    public static List<Item> Parse()
+    public static List<Item> ReceberJson()
     {
         // Recebe os paths
-        string absolutePath = @"C:\Users\pedrov\source\repos\MarmitaEletronica\Cardapio\Itens.json";
+        string absolutePath = @"C:\Users\luanar\source\repos\MarmitaEletronica\Cardapio\Itens.json";
         string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
         string relativePath = Path.GetRelativePath(baseDirectory, absolutePath);
 
@@ -31,7 +33,7 @@ internal class JsonParser
         }
     }
 
-    public static void Printing(List<Item> itemList)
+    public void Printing(List<Item> itemList)
     {
         if (itemList == null)
         {
