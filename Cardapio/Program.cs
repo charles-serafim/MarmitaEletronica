@@ -12,7 +12,7 @@ namespace Cardapio
             CardapioLogica cardapioLogica = new CardapioLogica();
             List<Item> ItensDoCardapio = cardapioLogica.ItemsDoCardapio;
 
-            cardapioLogica.MostrarCardapioOrdenadoPorNome();
+            cardapioLogica.MostrarCardapioOrdenadoPorNomeEID();
         }
     }
 }

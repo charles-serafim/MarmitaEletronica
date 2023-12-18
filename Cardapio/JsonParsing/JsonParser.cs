@@ -1,5 +1,4 @@
 ﻿using Cardapio.TiposItems;
-using Cardapio.TiposItems;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,7 +10,7 @@ public abstract class JsonParser
     public static List<Item> ReceberJson()
     {
         // Recebe os paths
-        string absolutePath = @"C:\Users\luanar\source\repos\MarmitaEletronica\Cardapio\Itens.json";
+        string absolutePath = @"C:\Users\pedrov\source\repos\MarmitaEletronica\Cardapio\Itens.json";
         string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
         string relativePath = Path.GetRelativePath(baseDirectory, absolutePath);
 
@@ -21,7 +20,7 @@ public abstract class JsonParser
             List<Item> itemList = JsonSerializer.Deserialize<List<Item>>(jsonString);
             for (int i = 0; i < itemList.Count; i++)
             {
-                itemList[i].ID = i + 1; // IDs iniciando de 1 (ou do valor desejado)
+                itemList[i].Id = i + 1; // IDs iniciando de 1 (ou do valor desejado)
             }
 
             return itemList;
@@ -44,7 +43,7 @@ public abstract class JsonParser
         foreach (var item in itemList)
         {
             Console.WriteLine($"" +
-                $"\nNúmero: {item.ID}," +
+                $"\nNúmero: {item.Id}," +
                 $"\nNome: {item.Nome}," +
                 $"\nTipo: {item.Tipo}," +
                 $"\nVegetariano: {item.Vegetariano}," +
