@@ -26,7 +26,7 @@ namespace UI.Menu
             this.Mesa = mesa;
         }
 
-        public void MenuLoop(CardapioLogica cardapio)
+        public void MenuLoop(CardapioLogica cardapio, Garcom garcomSelecionado)
         {
             int escolha;
             do
@@ -42,10 +42,10 @@ namespace UI.Menu
                         Mesa.ChamarGarcom();
                         break;
                     case 2:
-                        Garcom.ExibirCardapio();
+                        garcomSelecionado.ExibirCardapio();
                         break;
                     case 3:
-                        int pedirItem, idItem;
+                        int pedirItem, idItem, adicionouItem;
                         Console.WriteLine("Já deicidiu o item que deseja pedir? ");
                         Console.WriteLine("1 - SIM, 2 - NÃO");
                         pedirItem = int.Parse(Console.ReadLine());
@@ -53,7 +53,8 @@ namespace UI.Menu
                         {
                             Console.WriteLine("Informe o ID do item que deseja pedir: ");
                             idItem = int.Parse(Console.ReadLine());
-                            Mesa.FazPedido(cardapio, idItem);
+                            adicionouItem = Mesa.FazPedido(cardapio, idItem);
+                            if (adicionouItem == 1) Console.WriteLine("Item adicionado com sucesso.");
                         }
                         //if (pedirItem == 2)
                         //{

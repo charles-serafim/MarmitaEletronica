@@ -24,16 +24,22 @@ namespace GestaoDePedidos.Pedidos
 
         public int AdicionarItem(CardapioLogica cardapio, int idItem)
         {
-            QqtItens = Itens.Count;
-            Item item = SelecionaItem(cardapio, idItem);
+            if (Itens == null) QqtItens = 0;
 
-            if (!cardapio.ItemsDoCardapio.Contains(item))
+            else if (Itens.Count == QqtItens)
             {
-                throw new Exception("Item não adicionado");
-            }
+                Item item = SelecionaItem(cardapio, idItem);
 
-            Itens.Add(item);
-            ValorTotal += item.Preco;
+                if (!cardapio.ItemsDoCardapio.Contains(item) || !(Itens.Count == QqtItens + 1))
+                {
+                    throw new Exception("Item não adicionado");
+                }
+
+                Itens.Add(item);
+                QqtItens++;
+                ValorTotal += item.Preco;
+            }
+            
             return 1;
         }
 

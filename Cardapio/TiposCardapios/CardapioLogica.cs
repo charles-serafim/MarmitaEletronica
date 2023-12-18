@@ -15,20 +15,20 @@ namespace Cardapio.TiposCardapios
             new Item { Id = 3, Nome = "Marmita de Casal", Tipo = 0, Vegetariano = false, Preco = 21, Descricao = "Marmita para casais, serve duas pessoas", Calorias = 1000 }
         };
 
-        public List<Item> OrdenarItensPorNomeEID()
-        // Encapsulate ItemsDoCardapio with a property
-        private List<Item> _itemsDoCardapio;
-        public List<Item> ItemsDoCardapio
-        {
-            get
-            {
-                if (_itemsDoCardapio == null)
-                {
-                    _itemsDoCardapio = ReceberJson<Item>(@"C:\Users\luanar\source\repos\MarmitaEletronica\Cardapio\Itens.json");
-                }
-                return _itemsDoCardapio;
-            }
-        }
+        //public List<Item> OrdenarItensPorNomeEID();
+        //// Encapsulate ItemsDoCardapio with a property
+        //private List<Item> _itemsDoCardapio;
+        //public List<Item> ItemsDoCardapio
+        //{
+        //    get
+        //    {
+        //        if (_itemsDoCardapio == null)
+        //        {
+        //            _itemsDoCardapio = ReceberJson<Item>(@"C:\Users\luanar\source\repos\MarmitaEletronica\Cardapio\Itens.json");
+        //        }
+        //        return _itemsDoCardapio;
+        //    }
+        //}
 
         public List<Item> OrdenarItensPorNomeEID() => ItemsDoCardapio.OrderBy(item => item.Nome).ThenBy(item => item.Id).ToList();
 

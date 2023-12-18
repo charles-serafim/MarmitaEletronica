@@ -19,8 +19,8 @@ public class TesteUI
         var atendimento = new MenuGarcom();
         var mesa = recepcao.SelecionaMesa();
         var garcom = atendimento.AtribuiGarcom(mesa);
-        atendimento.MostraCardapio();
+        atendimento.MostraCardapio(garcom);
         var usuario = new MenuMesa(mesa);
-        usuario.MenuLoop(cardapio);
+        usuario.MenuLoop(cardapio, garcom);
     }
 }
