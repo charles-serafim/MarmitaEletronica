@@ -81,10 +81,6 @@ namespace GestaoDePedidos.Mesas
             {
                 throw new Exception("Mesa não foi aberta");
             }
-            if (this.comanda?.EstadoComanda != StatusComanda.Aberta)
-            {
-                throw new Exception("A comanda não está aberta");
-            }
             this.comanda.EstadoComanda = StatusComanda.ChamandoGarcom;
             Console.WriteLine("Comanda aberta.");
             //FazPedido(cardapio, idItem);
