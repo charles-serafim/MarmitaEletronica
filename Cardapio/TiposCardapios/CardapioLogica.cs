@@ -2,19 +2,16 @@
 using System.Collections.Generic;
 using System.Collections.Generic;
 using Cardapio.TiposItems;
-using Cardapio.TiposItems.Cardapio.TiposItems;
-
 
 namespace Cardapio.TiposCardapios
 {
-    public class Cardapio
+    public class CardapioLogica:JsonParser
     {
-        public string? Sessao { get; set; }
-        public List<Item> ItemsDoCardapio = new List<Item>();
+        public List<Item> ItemsDoCardapio = JsonParser.ReceberJson();
 
         public List<Item> OrdenarItensPorNomeEID()
         {
-            return ItemsDoCardapio.OrderBy(item => item.Nome).ThenBy(item => item.ID).ToList();
+            return ItemsDoCardapio.OrderBy(item => item.Nome).ThenBy(item => item.Id).ToList();
         }
 
         public List<Item> OrdenarItensPorNome()
@@ -37,22 +34,17 @@ namespace Cardapio.TiposCardapios
             return ItemsDoCardapio.OrderBy(item => item.Vegetariano).ThenBy(item => item.Nome).ToList();
         }
 
-        public Cardapio(string? sessao)
-        {
-            Sessao = sessao;
-        }
-
         public void AdicionarItem(Item novoItem) => ItemsDoCardapio.Add(novoItem);
         public void RemoverItem(Item removerItem) => ItemsDoCardapio.Remove(removerItem);
 
         public void MostrarCardapioOrdenadoPorNome()
         {
-            Console.WriteLine($"--- Cardápio de {Sessao} Ordenado por Nome ---");
+            Console.WriteLine($"--- Cardápio de Refeições Ordenado por Nome ---");
 
             var itensOrdenados = OrdenarItensPorNome();
             foreach (var item in itensOrdenados)
             {
-                Console.WriteLine($"{item.Nome} - {item.Preco:C2} - {item.Descricao} - Calorias: {item.Calorias}");
+                Console.WriteLine($"{item.Id} - {item.Nome} - {item.Preco:C2} - {item.Descricao} - Calorias: {item.Calorias}");
             }
         }
     }

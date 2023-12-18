@@ -1,11 +1,15 @@
-﻿using Cardapio.TiposItems.Cardapio.TiposItems;
-using System;
-
-namespace Cardapio.TiposItems
+﻿namespace Cardapio.TiposItems
 {
-    public class ItemBebidas(string nome, decimal preco, string? descricao, double calorias, bool alcolica, bool natural) : Item(nome, preco, descricao, calorias)
+    public class ItemBebidas : Item
     {
-        public bool EhAlcolica { get; set; } = alcolica;
-        public bool EhNatural { get; set; } = natural;
+        public bool EhAlcolica { get; set; }
+        public bool EhNatural { get; set; }
+
+        public ItemBebidas(int id, string nome, TipoPrato tipo, bool vegetariano, decimal preco, string? descricao, double calorias, bool alcolica, bool natural)
+            : base(id, nome, tipo, vegetariano, preco, descricao, calorias)
+        {
+            EhAlcolica = alcolica;
+            EhNatural = natural;
+        }
     }
 }
