@@ -1,0 +1,20 @@
+[
+  {
+    "Nome": "Raphael",
+    "Id": 1,
+    "Mesa": 0
+  },
+  {
+    "Nome": "Lucas",
+    "Id": 2,
+    "Mesa": 0
+  },
+  {
+    "Nome": "Pedro",
+    "Id": 3,
+    "Mesa": 0
+  }
+]
+
+// Mesa tem 0 como valor padrao pois o valor da propriedade eh obtido posteriormente durante execucao do programa em 
+// MenuRecepcao.cs
