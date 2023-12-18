@@ -1,5 +1,4 @@
 ﻿using Cardapio.TiposItems;
-using Cardapio.TiposItems;
 using System;
 using System.Collections.Generic;
 using System.IO;

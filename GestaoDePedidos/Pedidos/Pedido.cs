@@ -1,6 +1,5 @@
 ﻿using Cardapio.TiposCardapios;
 using Cardapio.TiposItems;
-using Cardapio.TiposItems.Cardapio.TiposItems;
 using System;
 using System.Collections.Generic;
 using System.Linq;
