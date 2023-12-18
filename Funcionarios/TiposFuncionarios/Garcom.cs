@@ -12,27 +12,27 @@ namespace Funcionarios.TiposFuncionarios
     {
         public int MesasAtendendo { get; set; }
 
-        public List <Mesas> listaDeMesasAtendidas { get; set; } = new List<Mesas>();
+        public Limpeza l1 { get; set; } = new Limpeza("Ramon", 10);
+        //public List <Mesas> listaDeMesasAtendidas { get; set; } = new List<Mesas>(); inicio de lógica para obtenção de quais mesas cada garçom
 
         public Cardapio.TiposCardapios.Cardapio cardapio { get; set; } = new Cardapio.TiposCardapios.Cardapio("");
-        public Garcom(string nome, string contato, int idade, string turno, string endereco, int id, double salario, int mesasAtendendo)
-            : base(nome, contato, idade, turno, endereco, id, salario)
+        public Garcom(string nome, int id, int mesasAtendendo)
+            : base(nome, id)
         {
             MesasAtendendo = mesasAtendendo;
         }
 
         public void AbrirMesaG(Mesas m)
         {         
-            m.AbrirMesa();
-            MesasAtendendo += 1;
-            listaDeMesasAtendidas.Add(m);
+            m.AbrirMesa();       
+            //listaDeMesasAtendidas.Add(m);
         }
 
         public void FecharMesaG(Mesas m)
         {
             m.FecharMesa();
-            MesasAtendendo -= 1;
-            listaDeMesasAtendidas.Remove(m);
+            l1.LimparMesa();
+            //listaDeMesasAtendidas.Remove(m);
         }
 
         public void FazPedidoG(Mesas m, int idItem)
