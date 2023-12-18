@@ -38,6 +38,7 @@ namespace Funcionarios.TiposFuncionarios
         public void FazPedidoG(Mesas m, int idItem)
         {
             m.FazPedido(idItem);
+
         }
 
         public string getNomeG()
