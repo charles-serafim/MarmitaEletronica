@@ -16,15 +16,10 @@ namespace Funcionarios.TiposFuncionarios
         protected int id { get; set; }
         protected double salario { get; set; }
 
-        public Funcionario(string nome, string contato, int idade, string turno, string endereco, int id, double salario)
+        public Funcionario(string nome,int id)
         {
-            this.nome = nome;
-            this.contato = contato;
-            this.idade = idade;
-            this.turno = turno;
-            this.endereco = endereco;
-            this.id = id;
-            this.salario = salario;
+            this.nome = nome;           
+            this.id = id;          
         }
 
         public void Bonificar(bool meta)

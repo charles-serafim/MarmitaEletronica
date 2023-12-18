@@ -10,6 +10,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Cardapio\Cardapio.csproj" />
     <ProjectReference Include="..\GestaoDePedidos\GestaoDePedidos.csproj" />
+    <ProjectReference Include="..\MarmitaEletronica\MarmitaEletronica.csproj" />
   </ItemGroup>
 
 </Project>

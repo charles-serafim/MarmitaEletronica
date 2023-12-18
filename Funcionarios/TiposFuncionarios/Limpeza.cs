@@ -6,12 +6,21 @@ using System.Threading.Tasks;
 
 namespace Funcionarios.TiposFuncionarios
 {
-    internal class Limpeza : Funcionario
+    public class Limpeza : Funcionario
     {
-        public Limpeza(string nome, string contato, int idade, string turno, string endereco, int id, double salario)
-            : base(nome, contato, idade, turno, endereco, id, salario)
+        public Limpeza(string nome,int id)
+            : base(nome, id)
         {
 
+        }
+
+        public void LimparMesa()
+        {
+            Console.WriteLine("Limpeza Requisitada");
+            Console.WriteLine(".");
+            Console.WriteLine("..");
+            Console.WriteLine("...");
+            Console.WriteLine("Mesa Limpa com sucesso");
         }
     }
 }
