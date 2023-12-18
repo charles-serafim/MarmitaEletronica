@@ -9,11 +9,6 @@ public abstract class JsonParser
 {
     public static List<T> ReceberJson<T>(string absolutePath) where T : class // Metodo é estático, coloque o path do arquivo json
     {
-        // Recebe os paths
-        string absolutePath = @"C:\Users\luanar\source\repos\MarmitaEletronica\Cardapio\Itens.json"; //Mudar aqui, colocar nos inputs da func
-        string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-        string relativePath = Path.GetRelativePath(baseDirectory, absolutePath);
-
         try
         {
             string jsonString = File.ReadAllText(absolutePath);

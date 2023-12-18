@@ -12,7 +12,7 @@ namespace Cardapio
 
             CardapioLogica cardapioLogica = new CardapioLogica();
             List<Item> ItensDoCardapio = cardapioLogica.ItemsDoCardapio;
-            List<Item> ItensVegetarianos = cardapioLogica.OrdenarItensPorPreco();
+            List<Item> ItensVegetarianos = cardapioLogica.OrdenarItensPorVegetariano();
 
 
             cardapioLogica.MostrarCardapioOrdenado(ItensVegetarianos);
