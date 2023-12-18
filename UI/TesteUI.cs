@@ -21,6 +21,8 @@ public class TesteUI
         var garcom = atendimento.AtribuiGarcom(mesa);
         atendimento.MostraCardapio(garcom);
         var usuario = new MenuMesa(mesa);
-        usuario.MenuLoop(cardapio, garcom);
+        usuario.MenuLoop(mesa, cardapio, garcom);
+        //Console.WriteLine(mesa.comanda.ItensDaComanda.ValorTotal);
+        //Console.WriteLine(mesa.comanda.ItensDaComanda.ToString);
     }
 }

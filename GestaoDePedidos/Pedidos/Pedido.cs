@@ -11,15 +11,27 @@ namespace GestaoDePedidos.Pedidos
 {
     public class Pedido
     {
-        public CardapioLogica Cardapio { get; set; }
         public List<Item> Itens { get; set; }
         public decimal? ValorTotal { get; set; }
         public int QqtItens { get; set; }
 
         public Pedido()
         {
-            ValorTotal = 0;
+            Itens = new List<Item>();
+            ValorTotal = ObterValorTotal();
             QqtItens = 0;
+        }
+
+        public decimal ObterValorTotal()
+        {
+            if(Itens != null)
+            {
+                decimal valorTotal = 0;
+                foreach (Item item in Itens) valorTotal += item.Preco;
+                return valorTotal;
+            }
+
+            return 0;
         }
 
         public int AdicionarItem(CardapioLogica cardapio, int idItem)
@@ -30,14 +42,21 @@ namespace GestaoDePedidos.Pedidos
             {
                 Item item = SelecionaItem(cardapio, idItem);
 
-                if (!cardapio.ItemsDoCardapio.Contains(item) || !(Itens.Count == QqtItens + 1))
+                Itens.Add(item);
+
+
+
+                if (!cardapio.ItemsDoCardapio.Contains(item))
                 {
-                    throw new Exception("Item não adicionado");
+                    throw new Exception("Item não localizado no cardápio");
                 }
 
-                Itens.Add(item);
+                if (!(Itens.Count == QqtItens + 1))
+                {
+                    throw new Exception("Item não adicionado ao pedido");
+                }
+
                 QqtItens++;
-                ValorTotal += item.Preco;
             }
             
             return 1;
@@ -59,6 +78,11 @@ namespace GestaoDePedidos.Pedidos
         {
             if (ContemItem(idItem)) ;
             Itens.Remove(Itens.Find(x => x.Id == idItem));
+        }
+
+        public List<Item> ObterListaDeItens()
+        {
+            return Itens;
         }
 
     }

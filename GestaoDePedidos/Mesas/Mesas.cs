@@ -22,6 +22,7 @@ namespace GestaoDePedidos.Mesas
             }
 
             this.status = StatusMesa.Ocupada;
+            Console.WriteLine("Abrindo mesa...");
             AbrirComanda();
         }
 
@@ -34,6 +35,8 @@ namespace GestaoDePedidos.Mesas
 
             var comanda = new Comanda();
             comanda.EstadoComanda = StatusComanda.Aberta;
+
+            Console.WriteLine("Abrindo comanda...");
             this.comanda = comanda;
         }
 
@@ -58,6 +61,20 @@ namespace GestaoDePedidos.Mesas
             }
 
             this.comanda.EstadoComanda = StatusComanda.Fechada;
+        }
+        public void ExibirComanda()
+        {
+            if (this.comanda == null)
+            {
+                throw new Exception("Comanda não aberta");
+            }
+
+            Console.WriteLine($"O total da sua comanda é R$ {this.comanda.ItensDaComanda.ObterValorTotal():C2}");
+            Console.WriteLine("Itens na comanda:");
+            foreach (var item in this.comanda.ItensDaComanda.Itens)
+            {
+                Console.WriteLine($"Id: {item.Id} - Nome: {item.Nome} - Preço: {item.Preco:C2} - Descrição: {item.Descricao} - Calorias: {item.Calorias}");
+            }
         }
 
         public void ChamarGarcom()

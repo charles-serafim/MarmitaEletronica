@@ -6,7 +6,8 @@ namespace GestaoDePedidos.Mesas
     {
         public StatusComanda EstadoComanda { get; set; }
         public int IdComanda { get; set; }
-        public static int ComandasAbertas { get; set; }
+
+        public static int ComandasAbertas = 0;
         public Pedido ItensDaComanda { get; set; }
 
         public Comanda()
