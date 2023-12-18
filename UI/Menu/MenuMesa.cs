@@ -83,7 +83,7 @@ namespace UI.Menu
 
                 if (numeroItem != 0)
                 {
-                    Mesa.comanda.RemoverItem(numeroItem);
+                    Mesa.comanda.ItensDaComanda.RemoverItem(numeroItem);
                     Console.WriteLine($"O total da sua comanda é {Mesa.comanda.ItensDaComanda.ValorTotal}" +
                                    $" e os itens pedidos foram {Mesa.comanda.ItensDaComanda.ToString}");
                 }
@@ -96,5 +96,5 @@ namespace UI.Menu
 
             }
         }
-            
+    }   
 }
