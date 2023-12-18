@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cardapio.TiposCardapios;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -70,15 +71,23 @@ namespace GestaoDePedidos.Mesas
                 throw new Exception("A comanda não está aberta");
             }
             this.comanda.EstadoComanda = StatusComanda.ChamandoGarcom;
-            FazPedido();
+            Console.WriteLine("Comanda aberta.");
+            //FazPedido(cardapio, idItem);
         }
 
-        public void FazPedido(int idItem)
+        public int FazPedido(CardapioLogica cardapio, int idItem)
         {
-            if (this.comanda?.ItensDaComanda.AdicionarItem() == 0)
+            //if (this.comanda?.ItensDaComanda.AdicionarItem(cardapio, idItem) == 0)
+            //{
+            //    this.comanda.EstadoComanda = StatusComanda.Aberta;
+            //}
+            if (this.comanda != null && !this.comanda.ComandaAberta())
             {
                 this.comanda.EstadoComanda = StatusComanda.Aberta;
             }
+
+            int adicionouItem = comanda.ItensDaComanda.AdicionarItem(cardapio, idItem);
+            return adicionouItem;
         }
 
 

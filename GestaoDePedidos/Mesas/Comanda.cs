@@ -16,5 +16,10 @@ namespace GestaoDePedidos.Mesas
             IdComanda = ComandasAbertas;
             ItensDaComanda = new Pedido();
         }
+
+        public bool ComandaAberta()
+        {
+            return EstadoComanda == StatusComanda.Aberta;
+        }
     }
 }

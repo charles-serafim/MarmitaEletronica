@@ -13,7 +13,19 @@ namespace UI.Menu
 
         public MenuRecepcao()
         {
-            Mesas = LeitorDeJson(); 
+            //public int Id { get; set; }
+            //public int Lugares { get; set; }
+            //public StatusMesa status { get; set; }
+            //public Comanda? comanda { get; set; }
+            //Mesas = LeitorDeJson(); 
+            Mesas = new List<Mesas>
+            {
+                new Mesas { Id = 1, Lugares = 4, status = StatusMesa.Livre, comanda = null },
+                new Mesas { Id = 2, Lugares = 2, status = StatusMesa.Livre, comanda = null },
+                new Mesas { Id = 3, Lugares = 6, status = StatusMesa.Livre, comanda = null },
+                new Mesas { Id = 4, Lugares = 8, status = StatusMesa.Livre, comanda = null },
+                new Mesas { Id = 5, Lugares = 5, status = StatusMesa.Livre, comanda = null }
+            };
         }
 
         public Mesas SelecionaMesa()

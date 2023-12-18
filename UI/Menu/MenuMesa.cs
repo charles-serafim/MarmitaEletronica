@@ -6,6 +6,7 @@ using System.Threading.Channels;
 using System.Threading.Tasks;
 using GestaoDePedidos.Mesas;
 using Funcionarios.TiposFuncionarios;
+using Cardapio.TiposCardapios;
 
 namespace UI.Menu
 {
@@ -25,7 +26,7 @@ namespace UI.Menu
             this.Mesa = mesa;
         }   
 
-        public void MenuLoop()
+        public void MenuLoop(CardapioLogica cardapio)
         {
             int escolha;
             do
@@ -44,23 +45,23 @@ namespace UI.Menu
                         Garcom.ExibirCardapio();
                         break;
                     case 3:
-                        int escolha2;
+                        int pedirItem, idItem;
                         Console.WriteLine("Já deicidiu o item que deseja pedir? ");
                         Console.WriteLine("1 - SIM, 2 - NÃO");
-                        escolha2 = int.Parse(Console.ReadLine());
-                        if (escolha2 == 1)
+                        pedirItem = int.Parse(Console.ReadLine());
+                        if (pedirItem == 1)
                         {
                             Console.WriteLine("Informe o ID do item que deseja pedir: ");
-                            escolha2 = int.Parse(Console.ReadLine());
-                            Mesa.FazPedido(escolha2);
+                            idItem = int.Parse(Console.ReadLine());
+                            Mesa.FazPedido(cardapio, idItem);
                         }
-                        if (escolha2 == 2)
-                        {
-                            Garcom.ExibirCardapio();
-                            Console.WriteLine("Informe o ID do item que deseja pedir: ");
-                            escolha = int.Parse(Console.ReadLine());
-                            Mesa.FazPedido(escolha2);
-                        }
+                        //if (pedirItem == 2)
+                        //{
+                        //    Garcom.ExibirCardapio();
+                        //    Console.WriteLine("Informe o ID do item que deseja pedir: ");
+                        //    idItem = int.Parse(Console.ReadLine());
+                        //    Mesa.FazPedido(cardapio, idItem);
+                        //}
                         break;
                     case 4:
                         Mesa.FecharComanda();
