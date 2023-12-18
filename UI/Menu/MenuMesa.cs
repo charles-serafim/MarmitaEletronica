@@ -71,6 +71,29 @@ namespace UI.Menu
                 }
             } while (escolha != 4);
             Console.WriteLine($"O total da sua comanda é {Mesa.comanda.ItensDaComanda.ValorTotal}" +
+                 $" e os itens pedidos foram {Mesa.comanda.ItensDaComanda.ToString}");
+            Console.WriteLine("Os itens do pedido estão corretos? (sim/nao)");
+            string resposta = Console.ReadLine();
+
+            if (resposta.ToLower() == "nao")
+            {
+                Console.Write($"Digite o número do item a ser removido ou 0 para sair: ");
+                int numeroItem = int.Parse(Console.ReadLine());
+
+                if (numeroItem != 0)
+                {
+                    Mesa.comanda.RemoverItem(numeroItem);
+                    Console.WriteLine($"O total da sua comanda é {Mesa.comanda.ItensDaComanda.ValorTotal}" +
+                                   $" e os itens pedidos foram {Mesa.comanda.ItensDaComanda.ToString}");
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("Agradeçemos a preferência, volte sempre!");
+                break;
+
+            }
                 $" e os itens pedidos foram {Mesa.comanda.ItensDaComanda.ToString}");
             Console.WriteLine("Os itens do pedido estão corretos? (sim/nao)");
             string resposta = Console.ReadLine();
