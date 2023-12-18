@@ -22,10 +22,10 @@ namespace GestaoDePedidos.Pedidos
             QqtItens = 0;
         }
 
-        public int AdicionarItem(Cardapio.TiposCardapios.Cardapio cardapio)
+        public int AdicionarItem(Cardapio.TiposCardapios.Cardapio cardapio, int idItem)
         {
             QqtItens = Itens.Count;
-            Item item = SelecionaItem(cardapio);
+            Item item = SelecionaItem(cardapio, idItem);
             Itens.Add(item);
             if(Itens.Count <= QqtItens)
             {
@@ -35,10 +35,8 @@ namespace GestaoDePedidos.Pedidos
             return 1;
         }
 
-        public Item SelecionaItem(Cardapio.TiposCardapios.Cardapio cardapio)
+        public Item SelecionaItem(Cardapio.TiposCardapios.Cardapio cardapio, int idItem)
         {
-            Console.WriteLine("Digite o código do item: ");
-            int idItem = int.Parse(Console.ReadLine());
             Item itemEncontrado = cardapio.ItemsDoCardapio.FirstOrDefault(i => i.Id == idItem);
             return itemEncontrado;
         }
