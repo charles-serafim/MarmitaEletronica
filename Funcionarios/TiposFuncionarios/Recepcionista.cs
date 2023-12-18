@@ -13,5 +13,25 @@ namespace Funcionarios.TiposFuncionarios
         {
 
         }
+        //Lógica para trazer a verificação de mesas do menuRecepcao para a classe Recepcionista
+        //public List<Mesas> Mesas { get; set; }       
+        //Mesas = LeitorDeJson();   
+
+        //public Mesas? SelecionarMesaR(int resposta)
+        //{
+        //    if (Mesas.Find(x => x.Lugares == resposta && x.status == StatusMesa.Livre) != null)
+        //    {
+        //        return Mesas.Find(x => x.Lugares == resposta && x.status == StatusMesa.Livre);
+        //    }
+        //    else if (Mesas.Find(x => x.Lugares > resposta && x.status == StatusMesa.Livre) != null)
+        //    {
+        //        return Mesas.Find(x => x.Lugares > resposta && x.status == StatusMesa.Livre);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Não há mesas disponíveis que atendam a quantidade de clientes, por favor aguarde um momento.");
+        //        return null;
+        //    }
+        //}
     }
 }
