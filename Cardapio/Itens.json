@@ -1,11 +1,11 @@
 [
   {
-    "Id":  1,
+    "Id": 1,
     "Nome": "Marmita de Frango",
     "Tipo": 0,
     "Vegetariano": false,
     "Preco": 18.00,
-    "Descricao": "Marmita de frango muito boa e �pica",
+    "Descricao": "Marmita de frango muito boa e épica",
     "Calorias": 500
   },
   {
@@ -14,7 +14,7 @@
     "Tipo": 0,
     "Vegetariano": false,
     "Preco": 19.00,
-    "Descricao": "Marmita de porco muito boa e �pica",
+    "Descricao": "Marmita de porco muito boa e épica",
     "Calorias": 700
   },
   {
@@ -41,7 +41,7 @@
     "Tipo": 2,
     "Vegetariano": true,
     "Preco": 10.50,
-    "Descricao": "Cl�ssica salada de maionese",
+    "Descricao": "Clássica salada de maionese",
     "Calorias": 600
   },
   {
@@ -52,5 +52,77 @@
     "Preco": 11.00,
     "Descricao": "Salada com várias coisas como olivas, chu-chu e tomates",
     "Calorias": 450
+  },
+  {
+    "Id": 7,
+    "Nome": "Sopa de Legumes",
+    "Tipo": 1,
+    "Vegetariano": true,
+    "Preco": 8.50,
+    "Descricao": "Sopa reconfortante com uma variedade de legumes",
+    "Calorias": 300
+  },
+  {
+    "Id": 8,
+    "Nome": "Suco de Abacaxi",
+    "Tipo": 4,
+    "Vegetariano": true,
+    "Preco": 6.00,
+    "Descricao": "Refrescante suco natural de abacaxi",
+    "Calorias": 120
+  },
+  {
+    "Id": 9,
+    "Nome": "Agua",
+    "Tipo": 4,
+    "Vegetariano": true,
+    "Preco": 6.00,
+    "Descricao": "Beba agua!",
+    "Calorias": 0
+  },
+  {
+    "Id": 10,
+    "Nome": "Suco de Laranja",
+    "Tipo": 4,
+    "Vegetariano": true,
+    "Preco": 5.00,
+    "Descricao": "Refrescante suco natural de laranja! Uma delícia!",
+    "Calorias": 0
+  },
+  {
+    "Id": 11,
+    "Nome": "Cerveja",
+    "Tipo": 5,
+    "Vegetariano": true,
+    "Preco": 8.00,
+    "Descricao": "Cerveja linda e de ótima qualidade!",
+    "Calorias": 175
+  },
+  {
+    "Id": 12,
+    "Nome": "Vinho",
+    "Tipo": 5,
+    "Vegetariano": true,
+    "Preco": 13.00,
+    "Descricao": "Vinho muito bom!",
+    "Calorias": 175
+  },
+  {
+    "Id": 13,
+    "Nome": "Batata Frita",
+    "Tipo": 1,
+    "Vegetariano": true,
+    "Preco": 7.50,
+    "Descricao": "Batata Frita nham nham",
+    "Calorias": 400
+  },
+  {
+    "Id": 14,
+    "Nome": "Bolo de Maracuja",
+    "Tipo": 3,
+    "Vegetariano": true,
+    "Preco": 7.00,
+    "Descricao": "Um clássico da culinária brasileira!",
+    "Calorias": 350
   }
 ]
