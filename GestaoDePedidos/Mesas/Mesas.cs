@@ -96,7 +96,7 @@ namespace GestaoDePedidos.Mesas
             //{
             //    this.comanda.EstadoComanda = StatusComanda.Aberta;
             //}
-            if (this.comanda != null && !this.comanda.ComandaAberta())
+            if (this.comanda != null && this.comanda.EstadoComanda == StatusComanda.Aberta)
             {
                 this.comanda.EstadoComanda = StatusComanda.Aberta;
             }

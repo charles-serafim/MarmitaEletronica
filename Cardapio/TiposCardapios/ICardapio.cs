@@ -6,7 +6,6 @@ namespace Cardapio.TiposCardapios
     public interface ICardapio
     {
         List<Item> ItemsDoCardapio { get; }
-
         List<Item> OrdenarItensPorNomeEID();
         List<Item> OrdenarItensPorNome();
         List<Item> OrdenarItensPorTipo();

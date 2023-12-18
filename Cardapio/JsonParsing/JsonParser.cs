@@ -11,7 +11,7 @@ public abstract class JsonParser <T> where T : class
     {
         string tipo = typeof(T).Name; // Recebe o nome da classe
         // Recebe os paths
-        string absolutePath = @$"C:\Users\yuric\source\repos\MarmitinhaEletronica\JsonParsing\Arquivos\{tipo}.json";
+        string absolutePath = @$"C:\Users\yuric\source\repos\MarmitaEletronica\Cardapio\Itens.json";
         string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
         string relativePath = Path.GetRelativePath(baseDirectory, absolutePath);
 
