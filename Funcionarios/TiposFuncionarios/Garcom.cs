@@ -15,7 +15,7 @@ namespace Funcionarios.TiposFuncionarios
         public Limpeza l1 { get; set; } = new Limpeza("Ramon", 10);
         //public List <Mesas> listaDeMesasAtendidas { get; set; } = new List<Mesas>(); inicio de lógica para obtenção de quais mesas cada garçom
 
-        public Cardapio.TiposCardapios.Cardapio cardapio { get; set; } = new Cardapio.TiposCardapios.Cardapio("");
+        public CardapioLogica cardapio { get; set; } = new CardapioLogica();
         public Garcom(string nome, int id, int mesasAtendendo)
             : base(nome, id)
         {
