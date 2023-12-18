@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Cardapio\Cardapio.csproj" />
+    <ProjectReference Include="..\GestaoDePedidos\GestaoDePedidos.csproj" />
+  </ItemGroup>
+
 </Project>
