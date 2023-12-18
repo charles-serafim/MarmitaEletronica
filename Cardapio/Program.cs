@@ -9,10 +9,13 @@ namespace Cardapio
     {
         static void Main(string[] args)
         {
+
             CardapioLogica cardapioLogica = new CardapioLogica();
             List<Item> ItensDoCardapio = cardapioLogica.ItemsDoCardapio;
+            List<Item> ItensVegetarianos = cardapioLogica.OrdenarItensPorVegetariano();
 
-            cardapioLogica.MostrarCardapioOrdenadoPorNome();
+
+            cardapioLogica.MostrarCardapioOrdenado(ItensVegetarianos);
         }
     }
 }
