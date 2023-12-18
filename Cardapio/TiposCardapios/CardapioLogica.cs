@@ -11,7 +11,7 @@ namespace Cardapio.TiposCardapios
 
         public List<Item> OrdenarItensPorNomeEID()
         {
-            return ItemsDoCardapio.OrderBy(item => item.Nome).ThenBy(item => item.ID).ToList();
+            return ItemsDoCardapio.OrderBy(item => item.Nome).ThenBy(item => item.Id).ToList();
         }
 
         public List<Item> OrdenarItensPorNome()
