@@ -2,11 +2,7 @@
 
 namespace Cardapio.TiposCardapios
 {
-    internal class CardapioBebidas : Cardapio
+    internal class CardapioBebidas : CardapioLogica
     {
-        public CardapioBebidas(string? sessao) : base(sessao)
-        {
-            Sessao = "Bebidas";
-        }
     }
 }

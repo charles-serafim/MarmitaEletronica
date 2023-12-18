@@ -1,6 +1,6 @@
 [
   {
-    "ID": 1,
+    "Id":  1,
     "Nome": "Marmita de Frango",
     "Tipo": 0,
     "Vegetariano": false,
@@ -9,7 +9,7 @@
     "Calorias": 500
   },
   {
-    "ID": 2,
+    "Id": 2,
     "Nome": "Marmita de Porco",
     "Tipo": 0,
     "Vegetariano": false,
@@ -18,7 +18,7 @@
     "Calorias": 700
   },
   {
-    "ID": 3,
+    "Id": 3,
     "Nome": "Marmita de Casal",
     "Tipo": 0,
     "Vegetariano": false,
@@ -27,7 +27,7 @@
     "Calorias": 1000
   },
   {
-    "ID": 4,
+    "Id": 4,
     "Nome": "Salada Caesar",
     "Tipo": 2,
     "Vegetariano": false,
@@ -36,7 +36,7 @@
     "Calorias": 450
   },
   {
-    "ID": 5,
+    "Id": 5,
     "Nome": "Salada de Maionese",
     "Tipo": 2,
     "Vegetariano": true,
@@ -45,7 +45,7 @@
     "Calorias": 600
   },
   {
-    "ID": 6,
+    "Id": 6,
     "Nome": "Salada Grega",
     "Tipo": 2,
     "Vegetariano": false,

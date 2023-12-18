@@ -12,7 +12,6 @@ namespace UI.Menu
     {
         public Mesas Mesa { get; set; }
         public List<Garcom>? Garcons { get; set; }
-
         public Garcom? Garcom { get; set; }
 
         public void AtribuiGarcom(Mesas mesa)
