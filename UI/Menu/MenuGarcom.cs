@@ -33,8 +33,12 @@ namespace UI.Menu
         public void MostraCardapio(Garcom garcomSelecionado)
         {
             if (Mesa.Lugares > 1)
+            {
+                Console.Clear();
                 Console.WriteLine($"Sejam bem vindos à Marmita Eletrônica, meu nome é {garcomSelecionado.getNomeG()} e será um prazer atendê-los\n\n" +
-                    $"Aqui está o cardápio, fiquem à vontade e me chamem quando estiverem prontos para realizar o pedido.");
+                    $"Aqui está o cardápio, fiquem à vontade e me chamem quando estiverem prontos para realizar o pedido.\n");
+            }
+                
 
             else Console.WriteLine($"Bem vindo à Marmita Eletrônica, meu nome é {garcomSelecionado.getNomeG()} e será um prazer atendê-lo\n\n" +
                 $"Aqui está o cardápio, fiquem à vontade e me chamem quando quiser realizar o pedido.");

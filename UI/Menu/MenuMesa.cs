@@ -31,6 +31,7 @@ namespace UI.Menu
             int escolha;
             do
             {
+                Console.WriteLine();
                 Console.WriteLine("1 - Chamar garçom");
                 Console.WriteLine("2 - Ver cardápio");
                 Console.WriteLine("3 - Fazer pedido");
@@ -39,17 +40,25 @@ namespace UI.Menu
                 switch (escolha)
                 {
                     case 1:
+                        Console.Clear();
                         mesa.ChamarGarcom();
                         break;
 
                     case 2:
+                        Console.Clear();
                         garcomSelecionado.ExibirCardapio();
                         break;
 
                     case 3:
                         int pedirItem, idItem, adicionouItem;
-                        Console.WriteLine("Já deicidiu o item que deseja pedir? ");
+
+                        Console.Clear();
+                        garcomSelecionado.ExibirCardapio();
+                        Console.WriteLine();
+
+                        Console.WriteLine("Já decidiu o item que deseja pedir? ");
                         Console.WriteLine("1 - SIM, 2 - NÃO");
+
                         pedirItem = int.Parse(Console.ReadLine());
                         if (pedirItem == 1)
                         {
@@ -58,20 +67,14 @@ namespace UI.Menu
                             adicionouItem = mesa.FazPedido(cardapio, idItem);
                             if (adicionouItem == 1) Console.WriteLine("Item adicionado com sucesso.");
                         }
-                        //if (pedirItem == 2)
-                        //{
-                        //    Garcom.ExibirCardapio();
-                        //    Console.WriteLine("Informe o ID do item que deseja pedir: ");
-                        //    idItem = int.Parse(Console.ReadLine());
-                        //    Mesa.FazPedido(cardapio, idItem);
-                        //}
+
                         break;
 
                     case 4:
-
                         bool encerrar = false;
                         while (!encerrar)
                         {
+                            Console.Clear();
                             mesa.ExibirComanda();
 
                             Console.WriteLine("Os itens do pedido estão corretos? (sim/nao)");
@@ -92,11 +95,13 @@ namespace UI.Menu
                         break;
 
                     default:
+                        Console.Clear();
                         Console.WriteLine("Opção inválida");
                         break;
                 }
             } while (escolha != 4);
 
+            Console.Clear();
             Console.WriteLine("Agradeçemos a preferência, volte sempre!");
         }
     }   

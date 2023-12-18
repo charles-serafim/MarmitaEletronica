@@ -43,10 +43,12 @@ namespace UI.Menu
             if(Mesas.Find(x => x.Lugares == resposta && x.status == StatusMesa.Livre) != null)
             {
                 return Mesas.Find(x => x.Lugares == resposta && x.status == StatusMesa.Livre);
-            } else if (Mesas.Find(x => x.Lugares > resposta && x.status == StatusMesa.Livre) != null)
+            }
+            else if (Mesas.Find(x => x.Lugares > resposta && x.status == StatusMesa.Livre) != null)
             {
                 return Mesas.Find(x => x.Lugares > resposta && x.status == StatusMesa.Livre);
-            } else
+            }
+            else
             {
                 Console.WriteLine("Não há mesas disponíveis que atendam a quantidade de clientes, por favor aguarde um momento.");
                 return null;

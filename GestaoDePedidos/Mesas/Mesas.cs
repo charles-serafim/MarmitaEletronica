@@ -22,7 +22,6 @@ namespace GestaoDePedidos.Mesas
             }
 
             this.status = StatusMesa.Ocupada;
-            Console.WriteLine("Abrindo mesa...");
             AbrirComanda();
         }
 
@@ -36,7 +35,6 @@ namespace GestaoDePedidos.Mesas
             var comanda = new Comanda();
             comanda.EstadoComanda = StatusComanda.Aberta;
 
-            Console.WriteLine("Abrindo comanda...");
             this.comanda = comanda;
         }
 
