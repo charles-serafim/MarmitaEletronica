@@ -28,7 +28,7 @@ namespace UI.Menu
 
             Console.WriteLine($"Aguarde um momento enquanto preparamos sua mesa para {resposta} lugares.");
 
-            if(Mesas.Find(x => x.Lugares == resposta && x.status == StatusMesa.Livre) != null)
+            if(Mesas.Find(x => x.Lugares == resposta && x.status == StatusMesa.Livre) != null) //Recepcionista.SelecionarMesaR(resposta);
             {
                 return Mesas.Find(x => x.Lugares == resposta && x.status == StatusMesa.Livre);
             } else if (Mesas.Find(x => x.Lugares > resposta && x.status == StatusMesa.Livre) != null)
