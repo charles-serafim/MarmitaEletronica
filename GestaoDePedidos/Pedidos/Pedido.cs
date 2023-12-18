@@ -1,5 +1,6 @@
 ﻿using Cardapio.TiposCardapios;
 using Cardapio.TiposItems;
+using Cardapio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,11 +26,13 @@ namespace GestaoDePedidos.Pedidos
         {
             QqtItens = Itens.Count;
             Item item = SelecionaItem(cardapio, idItem);
-            Itens.Add(item);
-            if (Itens.Count <= QqtItens)
+
+            if (!cardapio.ItemsDoCardapio.Contains(item))
             {
                 throw new Exception("Item não adicionado");
             }
+
+            Itens.Add(item);
             ValorTotal += item.Preco;
             return 1;
         }

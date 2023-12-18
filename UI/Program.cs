@@ -6,13 +6,15 @@ namespace UI
     {
         static void Main(string[] args)
         {
+            TesteUI teste = new TesteUI();
             var recepcao = new MenuRecepcao();
             var atendimento = new MenuGarcom();
             var mesa = recepcao.SelecionaMesa();
-            var garcom = atendimento.SelecionaGarcom();
+            var garcom = atendimento.AtribuiGarcom(mesa);
             atendimento.MostraCardapio();
             var usuario = new MenuMesa(mesa);
-            usuario.MenuLoop();
+            teste.Teste();
+            //usuario.MenuLoop();
         }
     }
 }
