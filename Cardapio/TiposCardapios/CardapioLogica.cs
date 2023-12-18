@@ -9,39 +9,26 @@ namespace Cardapio.TiposCardapios
     {
         public List<Item> ItemsDoCardapio = JsonParser.ReceberJson(@"C:\Users\luanar\source\repos\MarmitaEletronica\Cardapio\Itens.json");
 
-        public List<Item> OrdenarItensPorNomeEID()
-        {
-            return ItemsDoCardapio.OrderBy(item => item.Nome).ThenBy(item => item.Id).ToList();
-        }
+        public List<Item> OrdenarItensPorNomeEID() => ReceberJson().OrderBy(item => item.Nome).ThenBy(item => item.Id).ToList();
 
-        public List<Item> OrdenarItensPorNome()
-        {
-            return ItemsDoCardapio.OrderBy(item => item.Nome).ToList();
-        }
+        public List<Item> OrdenarItensPorNome() => ReceberJson().OrderBy(item => item.Nome).ToList();
 
         public List<Item> OrdenarItensPorTipo()
         {
             return ItemsDoCardapio.OrderBy(item => item.Tipo.ToString()).ToList(); // Converted to string for ordering
         }
 
-        public List<Item> OrdenarItensPorPreco()
-        {
-            return ItemsDoCardapio.OrderBy(item => item.Preco).ToList();
-        }
+        public List<Item> OrdenarItensPorVegetariano() => ReceberJson().OrderBy(item => item.Vegetariano).ThenBy(item => item.Nome).ToList();
 
-        public List<Item> OrdenarItensPorVegetariano()
-        {
-            return ItemsDoCardapio.OrderBy(item => item.Vegetariano).ThenBy(item => item.Nome).ToList();
-        }
+        public void AdicionarItem(Item novoItem) => throw new NotImplementedException(); // Implementar a lógica p add um novo item, se for usar
 
-        public void AdicionarItem(Item novoItem) => ItemsDoCardapio.Add(novoItem);
-        public void RemoverItem(Item removerItem) => ItemsDoCardapio.Remove(removerItem);
+        public void RemoverItem(Item removerItem) => throw new NotImplementedException(); // msm coisa aqui
 
         public void MostrarCardapioOrdenadoPorNome() // Print de todo cardapio
         {
-            Console.WriteLine($"--- Cardápio de Refeições Ordenado por Nome ---");
+            Console.WriteLine($"--- Cardápio de Refeições Ordenado por Nome e ID ---");
 
-            var itensOrdenados = OrdenarItensPorNome();
+            var itensOrdenados = OrdenarItensPorNomeEID();
             foreach (var item in itensOrdenados)
             {
                 Console.WriteLine($"Id: {item.Id} - Nome: {item.Nome} - Preço: {item.Preco:C2} - Descrição: {item.Descricao} - Calorias: {item.Calorias}");
