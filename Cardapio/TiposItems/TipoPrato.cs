@@ -12,5 +12,7 @@ namespace Cardapio.TiposItems
         Entrada = 1,
         Salada = 2,
         Sobremesa = 3,
+        Bebida= 4,
+        BebidaAlcolica = 5
     }
 }
