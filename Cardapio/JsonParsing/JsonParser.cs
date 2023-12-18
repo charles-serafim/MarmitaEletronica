@@ -5,10 +5,16 @@ using System.IO;
 using System.Text.Json;
 
 
-public abstract class JsonParser
+public abstract class JsonParser <T> where T : class
 {
-    public static List<T> ReceberJson<T>(string absolutePath) where T : class // Metodo é estático, coloque o path do arquivo json
+    public static List<T> ReceberJson()
     {
+        string tipo = typeof(T).Name; // Recebe o nome da classe
+        // Recebe os paths
+        string absolutePath = @$"C:\Users\yuric\source\repos\MarmitinhaEletronica\JsonParsing\Arquivos\{tipo}.json";
+        string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+        string relativePath = Path.GetRelativePath(baseDirectory, absolutePath);
+
         try
         {
             string jsonString = File.ReadAllText(absolutePath);

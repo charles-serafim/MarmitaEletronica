@@ -8,11 +8,10 @@ using System.Threading.Tasks;
 
 namespace Funcionarios
 {
-    internal class FuncionariosLogica: JsonParser
+    internal class FuncionariosLogica: JsonParser<Funcionario>
     {
         // Coloque o path do seu PC aqui
-        public List<Funcionario> funcionariosItems = JsonParser.ReceberJson< Funcionario>(@"C:\Users\DiverseDev\Documents\Charles\MarmitaEletronica\MarmitaEletronica\Funcionarios\Funcionarios.json");
-
+        public List<Funcionario> funcionariosItems = JsonParser<Funcionario>.ReceberJson();
         //public List<Funcionario> OrdenarItensPorNome()
         //{
         //    return FuncionariosLogica.OrdenarItensPorNome(funcionariosItems);
