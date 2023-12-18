@@ -60,7 +60,7 @@ namespace GestaoDePedidos.Mesas
             this.comanda.EstadoComanda = StatusComanda.Fechada;
         }
 
-        public void ChamarGarcom(CardapioLogica cardapio, int idItem)
+        public void ChamarGarcom()
         {
             if (this.status != StatusMesa.Ocupada)
             {
@@ -71,7 +71,8 @@ namespace GestaoDePedidos.Mesas
                 throw new Exception("A comanda não está aberta");
             }
             this.comanda.EstadoComanda = StatusComanda.ChamandoGarcom;
-            FazPedido(cardapio, idItem);
+            Console.WriteLine("Comanda aberta.");
+            //FazPedido(cardapio, idItem);
         }
 
         public int FazPedido(CardapioLogica cardapio, int idItem)

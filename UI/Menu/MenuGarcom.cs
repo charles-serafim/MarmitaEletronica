@@ -14,13 +14,20 @@ namespace UI.Menu
         public List<Garcom>? Garcons { get; set; }
         public Garcom? Garcom { get; set; }
 
-        public void AtribuiGarcom(Mesas mesa)
+        public Garcom AtribuiGarcom(Mesas mesa)
         {
             this.Mesa = mesa;
-            Garcons = LeitorJSON();
-            this.Garcom = SelecionaGarcom();
+            //Garcons = LeitorJSON();
+            Garcons = new List<Garcom>
+            {
+                new Garcom("Charles", 1, 0),
+                new Garcom("Vinicius", 2, 0),
+                new Garcom("Luana", 3, 0)
+            };
+            Garcom garcomSelecionado = this.Garcom = SelecionaGarcom();
             this.Garcom.MesasAtendendo++;
             Garcom.AbrirMesaG(Mesa);
+            return garcomSelecionado;
         }
 
         public void MostraCardapio()
